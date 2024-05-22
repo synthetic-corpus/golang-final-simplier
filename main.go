@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	"os"
+	// "os" Keeping this here for future projects
 	"github.com/google/uuid"
 	"github.com/gorilla/mux"
 	//"net/mail"
@@ -223,7 +223,7 @@ func main() {
 	router.HandleFunc("/customers/{id}", updateCustomer).Methods("PATCH")
 	router.HandleFunc("/customers/{id}", deleteCustomer).Methods("DELETE")
 
-	port := ":" + os.Getenv("API_PORT")
+	port := ":3000" //+ os.Getenv("API_PORT") commenting out reference, but keeping for future iterations
 	fmt.Println("We are listening on " + port)
 
 	http.ListenAndServe(port, router)
