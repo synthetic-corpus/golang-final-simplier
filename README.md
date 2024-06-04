@@ -27,7 +27,8 @@ All paths for this project are
 Ensure that you have the *Content-Type: application/json* header set.
 
 The request body should look like this:
-`
+
+```json
 {
     "Name": "A string value goes here",
     "Role": "A string value goes here",
@@ -35,5 +36,4 @@ The request body should look like this:
     "Phone": 10 digit interger value,
     "Contacted": boolean value
 }
-
-`
+```
